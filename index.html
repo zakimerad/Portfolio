@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,7 +143,23 @@
             <h2 class="heading">Contactez <span>Moi</span></h2>
         </div>
         <div class="contact-container">
-            <?php require_once 'form.php';?>
+            <!-- <?php require_once 'form.php';?> -->
+            
+            <form
+  action="https://formspree.io/f/xjkvkqya"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
         </div>
     </section>
     <script>

@@ -47,16 +47,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Envoi de l'e-mail
         $mail->send();
-        $_SESSION['message']= "Votre message a été envoyé avec succès..";
+        echo "<h1>Votre message a été envoyé avec succès.</h1>";
         header('Location: index.php#Contact');
         exit();
         
     } catch (Exception $e) {
-        $_SESSION['message'] = "Le message n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}";
+        echo "<h3>Le message n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}</h3>";
         header('Location: index.php#Contact');
         exit();
     }
 } else {
     echo "Le formulaire n'a pas été soumis.";
 }
+
 ?>
