@@ -146,20 +146,27 @@
             <!-- <?php require_once 'form.php';?> -->
             
             <form
-  action="https://formspree.io/f/xjkvkqya"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+            action="https://formspree.io/f/xjkvkqya"
+            method="POST">
+            <div class="form__group field">
+                <input type="input" name="name" class="form__field" placeholder="Name" required>
+                <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="form__group field">
+                <input type="input" name="email" class="form__field" placeholder="Email" required>
+                <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="form__group field">
+                <textarea name="message" class="form__field" placeholder="Message" required></textarea>
+                <label for="message" class="form__label">Message</label>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn">Envoyer</button>
+            <br>
+            <br>
+            
+        </form>
         </div>
     </section>
     <script>
