@@ -179,6 +179,60 @@ span{
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.home-img img {
+    animation: bounce-in 1s ease-out;
+}
+
+.home-content h3,
+.home-content h1,
+.home-content p,
+.btn {
+    animation: fade-in-up 1s ease-out;
+}
+
+.social-media a {
+    animation: slide-in 1s ease-in-out;
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
 .about {
     background-color: var(--second-bg-color);
     padding-left: 20%;
@@ -221,16 +275,16 @@ span{
 }
 .carteEtd {
     padding-left: 10%;
-    opacity: 0;  /* Commence caché */
-    visibility: hidden;  /* Cache l'élément pour ne pas qu'il occupe de l'espace */
-    transform: translateY(20px); /* Déplace l'élément vers le bas */
-    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;  /* Ajoute la transition */
+    opacity: 0;  
+    visibility: hidden;  
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;  
 }
 
 .carteEtd.show {
     opacity: 1;  
     visibility: visible;  
-    transform: translateY(0); /* Réinitialise la position */
+    transform: translateY(0); 
 }
 
 .services h2 {
@@ -525,7 +579,7 @@ textarea.form__field {
 @media (max-width: 763px) {
     #menu-icon {
         display: block;
-        cursor: pointer; /* Ajoute ce style si ce n'est pas déjà fait */
+        cursor: pointer; 
     }
 
     .navbar {
@@ -607,4 +661,6 @@ textarea.form__field {
         width: 90wv;
     }
 }
+
+
 
